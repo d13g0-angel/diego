@@ -1,0 +1,166 @@
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>de Contacto</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  .container { 
+    background-color: #f5ecec;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+  }
+  button {
+    background-color: #2600ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button[type="reset"] {
+    background-color: #6c757d;
+    margin-left: 10px;
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+  .mensaje {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none; /* Oculto por defecto */
+  }
+  .mensaje.exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  .mensaje.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>de Contacto</h2>
+  <form id="miFormulario">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="form-group">
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+    </div>
+
+    <div class="form-group">
+      <label for="region">Región:</label>
+      <select id="region" name="region" required>
+        <option value="">Selecciona una región</option>
+        <option value="Norteamerica">Valles centrales </option>
+        <option value="Sudamerica">Sierra norte </option>
+        <option value="Europa">Sierra sur</option>
+        <option value="Asia">Mixteca </option>
+        <option value="Africa">Costa </option>
+        <option value="Oceania">Istmo</option>
+        <option value="Oceania">Papaloapan </option>
+        <option value="Oceania">Cañada </option>
+      </select>
+    </div>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Reiniciar Campos</button>
+  </form>
+  <div id="mensaje" class="mensaje"></div>
+</div>
+
+<script>
+  const = document.getElementById('miFormulario');
+  const mensajeDiv = document.getElementById('mensaje');
+
+  formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault(); // Evita que el se envíe de la manera tradicional
+
+    // Obtener los valores de los campos
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const region = document.getElementById('region').value;
+
+    // Validación simple (puedes añadir validaciones más complejas)
+    if (nombre === '' || correo === '' || region === '') {
+      mostrarMensaje('Por favor, completa todos los campos.', 'error');
+      return; // Detiene la ejecución si hay campos vacíos
+    }
+
+    // Aquí podrías enviar los datos a un servidor, por ejemplo, usando fetch()
+    // Por ahora, solo mostraremos un mensaje de éxito y reiniciaremos.
+
+    console.log('Datos del formulario:');
+    console.log('Nombre:', nombre);
+    console.log('Correo:', correo);
+    console.log('Región:', region);
+
+    mostrarMensaje('enviado con éxito.', 'exito');
+
+    // Reiniciar el después de un breve retraso para que el usuario vea el mensaje
+    setTimeout(() => {
+      formulario.reset(); // Reinicia los campos del formulario
+      mensajeDiv.style.display = 'none'; // Oculta el mensaje de nuevo
+      mensajeDiv.className = 'mensaje'; // Resetea clases del mensaje
+    }, 2000); // 2000 milisegundos = 2 segundos
+  });
+
+  // El botón de tipo "reset" reinicia los campos por defecto,
+  // pero si quieres hacer algo más al reiniciar (además de limpiar),
+  // puedes añadir un event listener al botón de reinicio.
+  const botonReset = formulario.querySelector('button[type="reset"]');
+  if (botonReset) {
+    botonReset.addEventListener('click', function() {
+      console.log('Campos reiniciados por el usuario.');
+      mensajeDiv.style.display = 'none'; // Oculta cualquier mensaje al reiniciar
+      mensajeDiv.className = 'mensaje';
+    });
+  }
+
+  function mostrarMensaje(texto, tipo) {
+    mensajeDiv.textContent = texto;
+    mensajeDiv.className = `mensaje ${tipo}`; // Añade la clase 'exito' o 'error'
+    mensajeDiv.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

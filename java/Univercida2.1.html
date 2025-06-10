@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oaxaca y sus Posibilidades Universitarias</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 600px; /* Ajusta según el tamaño de tu imagen */
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .text-container h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        /* Menú Horizontal */
+        .menu-horizontal {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            background-color: #34495e;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-horizontal li {
+            margin: 0;
+        }
+
+        .menu-horizontal a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .menu-horizontal a:hover {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+
+        /* Contenedores de Sección Llamativos */
+        .llamativo-contenedor {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .contenedor-seccion {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contenedor-seccion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .imagen-seccion {
+            width: 100%;
+            height: 250px; /* Altura fija para las imágenes */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eee;
+        }
+
+        .imagen-seccion img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+            transition: transform 0.3s ease;
+        }
+
+        .contenedor-seccion:hover .imagen-seccion img {
+            transform: scale(1.05);
+        }
+
+        .texto-seccion {
+            padding: 25px;
+            text-align: justify;
+        }
+
+        .texto-seccion h2 {
+            color: #3498db;
+            margin-top: 0;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .texto-seccion p {
+            margin-bottom: 15px;
+        }
+
+        .texto-seccion ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .texto-seccion ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .texto-seccion ul li::before {
+            content: '👉'; /* Puedes cambiar el emoji por un ícono o imagen */
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+        .texto-seccion ul li h3 {
+            display: inline;
+            color: #2980b9;
+            font-size: 1.1em;
+        }
+
+        .justificado {
+            text-align: justify;
+        }
+
+        /* Media Queries para Responsividad */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: center;
+                gap: 30px;
+                padding: 40px;
+            }
+
+            .image-container {
+                width: 40%;
+                margin-bottom: 0;
+            }
+
+            .text-container {
+                width: 50%;
+            }
+
+            .menu-horizontal {
+                justify-content: space-around;
+            }
+
+            .llamativo-contenedor {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contenedor-seccion {
+                flex: 1 1 calc(33% - 40px); /* 3 columnas en pantallas grandes */
+                max-width: calc(33% - 40px);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .menu-horizontal {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu-horizontal a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="c:\Users\diego\OneDrive\Pictures\univercidades\el primero.png" alt="Descripción de la imagen">
+        </div>
+        <div class="text-container">
+            <h1>Oaxaca y sus posibilidades universitarias</h1>
+        </div>
+    </div>
+
+    <ul class="menu-horizontal">
+        <li><a href="file:///C:/Users/diego/Downloads/java/valles.html">Valles centrales</a></li>
+        <li><a href="file:///C:/Users/diego/Downloads/java/sierra.html">Sierra norte</a></li>
+        <li><a href="file:///C:/Users/diego/Downloads/java/sierra%20sur.html">Sierra sur</a></li>
+        <li><a href="file:///C:/Users/diego/Downloads/java/las%20paginas%20de%20la%20univercidad.html">Mixteca</a></li>
+        <li><a href="file:///C:/Users/diego/Downloads/java/costa.html"> Costa</a></li>
+        <li><a href="file:///C:/Users/diego/Downloads/java/istmo.html">Istmo</a></li>
+        <li><a href="file:///C:/Users/diego/Downloads/java/papaloapan.html">Papaloapan</a></li>
+        <li><a href="file:///C:/Users/diego/Downloads/java/ca%C3%B1ada.html"> Cañada</a></li>
+        <li><a href="///C:/Users/diego/Downloads/java/formulario.html">Registrate</a></li>
+    </ul>
+
+    <div class="llamativo-contenedor">
+        <div class="contenedor-seccion">
+            <div class="imagen-seccion">
+                <img src="c:\Users\diego\OneDrive\Pictures\univercidades\descarga.jpg" alt="Imagen 1">
+            </div>
+            <div class="texto-seccion">
+                <h2>El Viaje Transformador: ¿Por qué la Universidad es Mi Próximo Horizonte?</h2>
+                <p class="justificado">En la encrucijada de decisiones que definen el rumbo de nuestras vidas, la elección de la educación superior se erige como un faro, iluminando senderos de crecimiento personal y profesional. Para mí, la universidad no
+                     es simplemente un escalón más en la escalera académica, sino un vibrante universo de posibilidades esperando ser explorado. Es un llamado intrínseco, una profunda convicción de que mi desarrollo pleno y mi contribución significativa a la sociedad se forjarán en las aulas
+                      y laboratorios de una institución universitaria.</p>
+
+                <p class="justificado">La motivación para emprender este viaje transformador reside en una poderosa tríada de anhelos: la sed insaciable de conocimiento, la búsqueda apasionada de crecimiento personal y la aspiración de dejar una huella positiva en el mundo.</p>
+
+                <p class="justificado">Desde temprana edad, la curiosidad ha sido mi brújula, impulsándome a cuestionar, investigar y comprender el complejo entramado de la realidad. La universidad se presenta como el escenario ideal para saciar esta sed de
+                     conocimiento de una manera estructurada y profunda. No se trata solo de memorizar datos, sino de aprender a pensar críticamente, a analizar información desde diversas perspectivas y a desarrollar la capacidad de generar nuevas ideas. La interacción
+                      con profesores apasionados y compañeros con inquietudes similares creará un ambiente estimulante donde el debate y la colaboración enriquecerán cada aprendizaje. Imagino las horas inmerso en bibliotecas, descubriendo teorías innovadoras, explorando los límites de la ciencia
+                       y la creatividad, y sintiendo la emoción de desvelar los misterios que aún aguardan.</p>
+
+            </div>
+        </div>
+
+        <div class="contenedor-seccion">
+            <div class="imagen-seccion">
+                <img src="c:\Users\diego\OneDrive\Pictures\univercidades\descarga (1).jpg" alt="Imagen 2">
+            </div>
+            <div class="texto-seccion">
+                <h2>Haz el futuro</h2>
+                <p class="justificado">En México, existen diversas carreras universitarias que se consideran innovadoras y modernas, con un gran potencial de crecimiento y desarrollo en el futuro. Estas carreras suelen estar relacionadas con los avances tecnológicos, la sostenibilidad y las nuevas tendencias del mercado laboral. Algunas de las opciones más destacadas incluyen:</p>
+                <ul>
+                    <li><h3>Ingeniería en Sistemas Computacionales / Desarrollo de Software:</h3>
+                        <p>Con la creciente dependencia de la tecnología en todos los sectores, los profesionales en desarrollo de software son altamente demandados.</p></li>
+                    <li><h3>Ciencia de Datos / Análisis de Datos / Big Data:</h3>
+                        <p>La capacidad de analizar grandes cantidades de datos para tomar decisiones estratégicas es fundamental para las empresas.</p></li>
+                    <li><h3>Ciberseguridad:</h3><p>La protección de datos y sistemas informáticos es crucial en un mundo cada vez más conectado.</p></li>
+                    <li><h3>Marketing Digital:</h3><p>El marketing ha evolucionado hacia el entorno digital, creando una gran demanda de profesionales en esta área.</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contenedor-seccion">
+            <div class="imagen-seccion">
+                <img src="c:\Users\diego\OneDrive\Pictures\univercidades\ayuda.jpg" alt="Imagen 3">
+            </div>
+            <div class="texto-seccion">
+                <h2>Nosotros te ayudamos</h2>
+                <p class="justificado"><b>Te presento un panorama completo:</b> Te ofrezco información organizada y fácil de entender sobre muchísimas universidades. Ya no tienes que saltar de una página a otra buscando datos dispersos. Aquí encuentras todo en un solo lugar.</p>
+                <p class="justificado"><b>Te ayudo a definir tus prioridades:</b> A través de filtros y herramientas de comparación, te permito enfocarte en lo que realmente te importa. ¿Buscas una universidad cerca de casa? ¿Te interesa una carrera específica que solo ofrecen en ciertos lugares? ¿El costo es un factor determinante? Yo te ayudo a refinar tu búsqueda.</p>
+                <p class="justificado"><b>Te doy una visión interna:</b> No solo te muestro datos fríos. Te comparto testimonios de estudiantes, fotos de las instalaciones, e incluso enlaces a visitas virtuales para que puedas sentirte dentro del campus sin salir de tu casa.</p>
+                <p class="justificado"><b>Te conecto con la información oficial:</b> Te dirijo directamente a las páginas web de las universidades para que puedas obtener la información más actualizada sobre procesos de admisión, becas y cualquier otra duda que tengas.</p>
+                <p class="justificado"><b>Te ahorro tiempo y esfuerzo:</b> En lugar de pasar horas investigando individualmente cada universidad, yo hago gran parte del trabajo pesado por ti. Esto te permite concentrarte en analizar la información y tomar una decisión informada.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
